@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
-
+import User from './Components/user/User';
+import userData from './fakeData/data.json';
 function App() {
+  const [users,setUser] = useState([]);
+  useEffect(()=>{
+    setUser(userData);
+  },[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      {/* <h2>Total user : {users.length}</h2> */}
+      <div className="user-container">
+        {
+          users.map(user=> <User user ={user} key={user.id}></User>)
+        }
+      </div>
+      <div>
+        this is cart
+      </div>
     </div>
   );
 }

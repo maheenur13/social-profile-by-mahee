@@ -1,0 +1,32 @@
+.user-box{
+    border: 1px solid gray;
+    margin:10px;
+    background-color:#3d424d ;
+    padding: 20px;
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+    /* flex-direction:column; */
+    color: rgb(235, 230, 214);
+}
+.image-box img{
+    width: 100%;
+    border-radius: 40%;
+}
+.image-box{
+    width: 400px;
+    margin-right: 20px;
+}
+.website{
+    word-wrap: break-word;
+    /* border: 1px solid gray; */
+    width:300px;
+}
+.btn{
+    padding:5px 30px 5px 30px;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    background-color: rgb(81, 39, 219);
+    border: none;
+}
